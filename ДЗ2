@@ -1,0 +1,56 @@
+mtx1 = []
+mtx2 = []
+opr = input("Введите операцию (+ или * ): ")
+print("Введите 1-ую матрицу")
+for x in range (3):
+	s=[]	
+	for y in range (3):
+		sappend(int(input()))
+	mtx1.append(s)
+for x in range(3):     		#Вид 1-ой матрицы
+	for y in range(3): 
+		print(mtx1[x][y], end = " ") 
+	print()   
+print("Введите 2-ую матрицу")
+mtx2 = []
+for x in range (3):
+	s=[]	
+	for y in range (3):
+		sappend(int(input()))
+	mtx2.append(s)
+for x in range(3):		#Вид 2-ой матрицы          
+	for y in range(3): 
+        	print(mtx2[x][y], end = " ")
+	print()
+print()
+
+if opr == "+":
+	for x in range(3):
+		for y in range(3):
+			mtx1[x][y] += mtx2[x][y]
+elif opr == "*":
+	for x in range(3):
+		for y in range(3):
+			mtx1[x][y] *= mtx2[x][y]
+else:
+    print("Ошибка. Команда не выполнена")
+for x in range(3):
+	for y in range(3):
+		print(mtx1[x][y], end = " ")
+	print() 
+""" 
+Перемножение и сложение матриц 3х3 
+
+Программа написана с использованием можудя 
+""" 
+import numpy as np 
+matrix1 = np.random.randint(0, 5, (3, 3)) 
+matrix2 = np.random.randint(0, 5, (3, 3)) 
+print("Первая матрица: ") 
+print(matrix1) 
+print("Вторая матрица: ") 
+print(matrix2) 
+print("Сумма матриц: ") 
+print(matrix1+matrix2) 
+print("Произведение матриц: ") 
+print(matrix1.dot(matrix2))
